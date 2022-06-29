@@ -2,4 +2,4 @@ Project Name: Social Media App
 
 ERD:
 
-![Sasi ERD](https://user-images.githubusercontent.com/70013071/172276713-6b5eec3c-f86d-44cd-ab0c-9d7e16815c5c.jpg)
+![New ERD](https://user-images.githubusercontent.com/70013071/176353561-2935c3c7-31ed-43f7-9512-d8c0bfcac011.png)

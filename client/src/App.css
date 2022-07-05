@@ -1,6 +1,71 @@
-body {
-  padding-top: 0px;
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
 }
+
+body {
+  background:#514A9D !important ;
+  color: black !important;
+  padding-top: 0px;
+  height: 100%;
+}
+
+.navbar-brand,.nav-link{
+  color:white !important ;
+}
+
+.root-container {
+  height: 100% !important;
+}
+
+.login-container{
+  height: 100% !important;
+}
+
+.login-form-container {
+  /* background: linear-gradient(to bottom, #514A9D, #24C6DC ) !important;
+  background-repeat: no-repeat; */
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.custom-login-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center !important;
+  align-items: center;
+}
+
+.custom-login-column {
+  background: #fff;
+  position: relative;
+}
+
+
+
+
+.panel-default {
+  opacity: 0.9;
+  margin-top:30px;
+ }
+ .form-group.last {
+  margin-bottom:0px;
+ }
+
 .panel-login {
 border-color: #ccc;
 -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
@@ -128,6 +193,108 @@ border-color: #1CA347;
 
 .App-link {
   color: #61dafb;
+}
+
+h1:first-of-type {
+  font-weight: var(--weight1);
+  color: var(--varyDarkBlue);
+
+}
+
+h1:last-of-type {
+  color: var(--varyDarkBlue);
+}
+
+@media (max-width: 400px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+}
+
+.header {
+  text-align: center;
+  line-height: 0.8;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.header p {
+  margin: 0 auto;
+  line-height: 2;
+  color: var(--grayishBlue);
+}
+
+
+.box p {
+  color: var(--grayishBlue);
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  padding: 30px;
+  margin-top: 20px;  
+}
+
+img {
+  float: right;
+}
+
+@media (max-width: 450px) {
+  .box {
+      height: 200px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+  .box {
+      text-align: center;
+      height: 180px;
+  }
+}
+
+.cyan {
+  border-top: 3px solid var(--cyan);
+}
+.red {
+  border-top: 3px solid var(--red);
+}
+.blue {
+  border-top: 3px solid var(--blue);
+}
+.orange {
+  border-top: 3px solid var(--orange);
+}
+
+h2 {
+  color: var(--varyDarkBlue);
+  font-weight: var(--weight3);
+}
+
+
+@media (min-width: 950px) {
+  .row1-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .row2-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .box-down {
+      position: relative;
+  }
+  .box {
+      width: 100%;
+   
+  }
+  .header p {
+      width: 100%;
+  }
+  
 }
 
 @keyframes App-logo-spin {

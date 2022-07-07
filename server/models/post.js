@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 // 2. create schema for entity
 const postSchema = new mongoose.Schema({
   postcontent: { type: String, unique: true, required: true},
-  postid: { type: String},
   userid: { type: String, required: true},
 })
 
@@ -14,11 +13,9 @@ const Post = mongoose.model("Post", postSchema);
 // 4. create CRUD functions on model
 //CREATE a user
 async function postcreate(userid,postcontent) {
- 
-
   const newPost = await Post.create({
-    userid: userid,
-    postcontent: postcontent
+    postcontent: postcontent,
+    userid: userid
   });
 
   return newPost ;
@@ -42,7 +39,13 @@ async function getpostid(postid) {
   return await Post.findOne({ "_id": postid});
 }
 
+//GET POST
+async function getPosts(userid) {
+  return await Post.find({"userid":userid});
+}
+
+
 // 5. export all functions we want to access in route files
 module.exports = { 
-  postcreate,editpost,deletePost,getpostid
+  postcreate,editpost,deletePost,getpostid, getPosts
 };

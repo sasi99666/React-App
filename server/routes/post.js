@@ -9,9 +9,18 @@ router
   .post('/postcreate', async (req, res) => {
     try {
       const post = await Post.postcreate(req.body.userid, req.body.postcontent);
-      res.send({...post, postid: undefined});
+      res.send({...post, postid: undefined, message: 'Post saved' });
     } catch(error) {
       res.status(401).send({ message: error.message }); 
+    }
+  })
+
+  .post('/viewposts', async (req, res) => {
+    try {
+      const posts = await Post.getPosts(req.body.userid);
+      res.send(posts);
+    } catch(error) {
+      res.status(401).send({ message: error.message });
     }
   })
 

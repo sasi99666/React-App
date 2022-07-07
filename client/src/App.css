@@ -12,8 +12,60 @@
 }
 
 body {
+  background:#514A9D !important ;
+  color: black !important;
   padding-top: 0px;
+  height: 100%;
 }
+
+.navbar-brand,.nav-link{
+  color:white !important ;
+}
+
+.root-container {
+  height: 100% !important;
+}
+
+.login-container{
+  height: 100% !important;
+}
+
+.login-form-container {
+  /* background: linear-gradient(to bottom, #514A9D, #24C6DC ) !important;
+  background-repeat: no-repeat; */
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.custom-login-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center !important;
+  align-items: center;
+}
+
+.custom-login-column {
+  background: #fff;
+  position: relative;
+}
+
+
+
+
+.panel-default {
+  opacity: 0.9;
+  margin-top:30px;
+ }
+ .form-group.last {
+  margin-bottom:0px;
+ }
+
 .panel-login {
 border-color: #ccc;
 -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
@@ -225,6 +277,7 @@ img {
 h2 {
   color: var(--varyDarkBlue);
   font-weight: var(--weight3);
+<<<<<<< HEAD
 }    
 
 .btn-delete{
@@ -239,6 +292,8 @@ h2 {
 
 .alert-border{
   border: none !important;
+=======
+>>>>>>> 8e9dc1169c5438c2bc40e1a2a47d8f8fcb5d9eb8
 }
 
 

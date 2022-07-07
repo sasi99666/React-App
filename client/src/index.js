@@ -14,8 +14,13 @@ axios.defaults.withCredentials = true;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+<<<<<<< HEAD
   <BrowserRouter>
       <Routes>
+=======
+  <BrowserRouter className=" test class">
+      <Routes className="test 2">
+>>>>>>> 8e9dc1169c5438c2bc40e1a2a47d8f8fcb5d9eb8
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

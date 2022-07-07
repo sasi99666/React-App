@@ -19,8 +19,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true})); 
 app.use(bodyParser.json()); 
-app.use(express.static(__dirname + "/public"));
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public', 'index.html')));
+app.use(express.static(__dirname + "/Public"));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/Public', 'index.html')));
 app.use(cors({ credentials:true, origin:'https://appsasikanth.herokuapp.com' }));
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin,X-Requested-Width,Content-Type,Accept,Authorization");
